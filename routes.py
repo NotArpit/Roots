@@ -30,4 +30,9 @@ def trade(id):
 def addTrade(id):
     if request.method == "POST":
         #logic here
+        pass
     return render_template("addTrade.html", id=id)
+
+@app.route("/listing/<int:id>", methods=["GET","POST"])
+def listing(id):
+    return render_template("listing.html", id=id)
