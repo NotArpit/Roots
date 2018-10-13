@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, redirect
-
-app = Flask(__name__)
+from foodSystem import *
+from user import *
+from server import app, system
 
 @app.route("/")
 def home ():

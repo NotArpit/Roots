@@ -2,16 +2,21 @@ from flask import Flask
 from abc  import ABC, abstractmethod
 
 
-class foodSystem(ABC):
-	def __init__(self, userList=[], priceList = []):
-		self.__users =  userList
-		self.__priceList = priceList
+class foodSystem(object):
+	def __init__(self):
+		self.__users = []
+		self._priceList = {}
 		
-	@property 
-	def getUsers:
+
+	def getUsers(self):
 		return self.__users
 
-	@property 
-	def getPrices:
+
+	def getPrices(self):
 		return self.__priceList
 
+	def addPriceList(self, produce, price):
+		self._priceList[produce] = price
+
+	def getPriceList(self):
+		return self._priceList
