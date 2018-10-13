@@ -1,4 +1,5 @@
 from flask import Flask
+from trade import *
 
 class User():
 	def __init__(self):
