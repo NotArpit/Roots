@@ -3,6 +3,7 @@ from foodSystem import *
 from user import *
 from server import app, system, userA, userB
 from flask import Flask, render_template, url_for, redirect, request
+from trade import *
 
 @app.route("/<int:id>")
 def index(id):

@@ -1,5 +1,6 @@
 from flask import Flask
 from abc  import ABC, abstractmethod
+from trade import *
 
 
 class User():

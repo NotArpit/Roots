@@ -2,6 +2,7 @@ from flask import Flask
 from foodSystem import *
 from user import *
 import csv
+from trade import *
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Another_highly_secret_key'
