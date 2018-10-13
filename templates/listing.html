@@ -183,7 +183,13 @@
                 <tbody>
                   <tr>
                     <td class="mdl-data-table__cell--non-numeric"> Bananas</td>
-                    <td>{{bananaQ}}</td>
+                    <td>
+			{% if id == 1 %} 
+			{{bananaQ}}
+			{% else %}
+		  	120	
+			{% endif %}
+		   </td>
                   </tr>
                 </tbody>
                 </table>
@@ -201,7 +207,13 @@
                   <tbody>
                     <tr>
                       <td class="mdl-data-table__cell--non-numeric"> Strawberries </td>
-                      <td>{{strawberriesQ}}</td>
+                      <td>
+			{% if id == 1 %}
+			{{strawberriesQ}}
+			{% else %}
+			100
+			{% endif %}
+		      </td>
                     </tr>
                   </tbody>
                   </table>
