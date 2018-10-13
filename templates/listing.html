@@ -201,7 +201,7 @@
 
 
 
-              <form action="#">
+              <form method="post">
                 <div class="table-wrap">
               <p><h2 class="mdl-card__title-text">Your Offer</h2></p>
               <table class="mdl-data-table mdl-js-data-table">
@@ -218,15 +218,15 @@
                     <td class="mdl-data-table__cell--non-numeric">
 
                         <div class="mdl-textfield mdl-js-textfield">
-                          <input class="mdl-textfield__input" type="text" id="sample1">
-                          <label class="mdl-textfield__label" for="sample1">Your Product</label>
+                          <input class="mdl-textfield__input" type="text" id="sample1", name="offer1">
+                          <label class="mdl-textfield__label" for="sample1">Your Offer</label>
                         </div>
 
                     </td>
                     <td>
 
                         <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;">
-                          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="quantity1">
                           <label class="mdl-textfield__label"  for="sample2">Quantity</label>
                           <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
@@ -253,14 +253,14 @@
                       <td class="mdl-data-table__cell--non-numeric">
 
                           <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="text" id="sample1">
-                            <label class="mdl-textfield__label" for="sample1">Your Product</label>
+                            <input class="mdl-textfield__input" type="text" id="sample1" name="request1">
+                            <label class="mdl-textfield__label" for="sample1">Your Request</label>
                           </div>
 
                       </td>
                       <td>
 
-                          <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;">
+                          <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;" name="quantity2">
                             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
                             <label class="mdl-textfield__label"  for="sample2">Quantity</label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
@@ -275,11 +275,9 @@
                 </div>
                 <p></p>
                   <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="/addTrade">
-                    Create Trade
-                    </a>
+                    <input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Submit">
                   </div>
-                    </form>
+            </form>
             </div>
             <div class="mdl-card__menu">
             </div>
