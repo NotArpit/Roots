@@ -224,7 +224,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 106px;
-  background-color: green;
+  background-color: #4caf50;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
