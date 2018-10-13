@@ -4,15 +4,21 @@ from abc  import ABC, abstractmethod
 
 class User():
 	def __init__(self):
-		self.__idNo
+		self.__idNo = 0
 		self.__fruitW = {}
-		self.__fruitN = {}
+		self.__fruitH = {}
 
 	def getID(self):
-		return self.__id
+		return self.__idNo
 
 	def getFruitW(self):
 		return self.__fruitW
 
-	def getFruitN(self):
-		return self.__fruitN
+	def getFruitH(self):
+		return self.__fruitH
+
+	def addFruitW(self, produce, quantity):
+		self.__fruitW[produce] = quantity
+
+	def addFruitH(self, produce, quantity):
+		self.__fruitH[produce] = quantity

@@ -1,12 +1,10 @@
 from flask import Flask, render_template, url_for, redirect
 from foodSystem import *
 from user import *
-from server import app, system
+from server import app, system, userA, userB
 from flask import Flask, render_template, url_for, redirect, request
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-db = SQLAlchemy(app)
 
 @app.route("/<int:id>")
 def index(id):
@@ -14,9 +12,6 @@ def index(id):
 
 @app.route("/trade/<id>", methods=["GET", "POST"])
 def trade(id):
-    # query all the deatils of this trade
-    details = Trades.query.filter_by(id=id).first()
-
     #date, place, food
     if request.method == "POST":
         # updating the quantities of each food
@@ -34,4 +29,5 @@ def trade(id):
 def addTrade(id):
     if request.method == "POST":
         #logic here
+        pass
     return render_template("addTrade.html", id=id)

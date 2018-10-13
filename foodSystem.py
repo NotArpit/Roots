@@ -11,7 +11,6 @@ class foodSystem(object):
 	def getUsers(self):
 		return self.__users
 
-
 	def getPrices(self):
 		return self.__priceList
 
@@ -20,3 +19,6 @@ class foodSystem(object):
 
 	def getPriceList(self):
 		return self._priceList
+
+	def addUsers(self, user):
+		return self.__users.append(user)
