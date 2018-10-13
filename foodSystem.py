@@ -1,6 +1,7 @@
 from flask import Flask
 
 class foodSystem(object):
+	trade_id = 0
 	def __init__(self):
 		self.__users = []
 		self._priceList = {}
@@ -26,6 +27,6 @@ class foodSystem(object):
 	def getTradeList(self):
 		return self.__tradeList
 
-	def addTradeList(self, user,quantityW, quantityH, itemW, itemH):
-		self.__tradeList[user] = self.__tradeDetailsW[]
-
+	def addTradeList(self, title, quantityW, itemW):
+		self.__tradeList[itemW] = quantityW
+		trade_id += 1

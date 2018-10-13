@@ -89,7 +89,8 @@
         <header class="demo-drawer-header mdl-color--green-500 mdl-color-text--white">
             <img src="{{ url_for('static', filename='images/user.jpg') }}" class="demo-avatar">
           <div class="demo-avatar-dropdown">
-          <span> {% if id == 1 %}
+          <span> 
+            {% if id == 1 %}
                  Chloe Li
                  {% elif id == 2 %}
                  Apurva Shukla
@@ -120,7 +121,7 @@
       <main class="mdl-layout__content mdl-color--grey-100">
 
         <div class="mdl-grid demo-content">
-          
+
         <table class="mdl-data-table mdl-js-data-table">
         <thead>
           <tr>
@@ -132,10 +133,16 @@
         </thead>
         <tbody>
           <tr>
-            <td class="mdl-data-table__cell--non-numeric">My Order: Strawberries, Watermelon</td>
+            {% for key in dictionary}
+            <td class="mdl-data-table__cell--non-numeric">{% product you want%}: {% quantity you want%}</td>
             <td>Sydney</td>
-            <td>Chloe Li</td>
-            <td>21-10-18</td>
+            <td>{% if id == 1 %}
+                 Chloe Li
+                 {% elif id == 2 %}
+                 Apurva Shukla
+                 {% endif %}</td>
+            <td>13-10-18</td>
+            {% end for %}
           </tr>
 
         </tbody>

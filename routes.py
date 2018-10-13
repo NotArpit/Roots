@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, redirect
 from foodSystem import *
 from user import *
-from server import app, system, userA, userB
+from server import *
 from flask import Flask, render_template, url_for, redirect, request
 from trade import *
 
@@ -21,7 +21,8 @@ def addTrade(id):
         product_want = request.form["productW"]
         quantity_want = request.form["quantityW"]
 
-        return redirect("{{url_for('index')}}")
+        return redirect("{{url_for('index')}}", title = trade_title, p_have = product_have,
+            q_have = quantity_have, p_want = product_want, q_want = quantityW)
 
 @app.route("/listing/<int:id>", methods=["GET","POST"])
 def listing(id):
