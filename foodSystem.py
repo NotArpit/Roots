@@ -28,5 +28,5 @@ class foodSystem(object):
 	def getTradeList(self):
 		return self.__tradeList
 
-	def addTradeList(self, user,quantityW, quantityH, itemW, itemH):
-		self.__tradeList[user] = self.__tradeDetailsW[]
+	#def addTradeList(self, user,quantityW, quantityH, itemW, itemH):
+		#self.__tradeList[user] = self.__tradeDetailsW[]
