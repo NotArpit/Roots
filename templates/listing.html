@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-teal.min.css" />
     <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+
     <style>
     #view-source {
       position: fixed;
@@ -58,13 +59,27 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+    .demo-card-wide.mdl-card {
+      width: 100%;
+    }
+
+    .mdl-data-table {
+      width: 100%;
+    }
+
+
+    .table-wrap {
+      width: calc(50% - 2px);
+      display: inline-block;
+
+    }
     </style>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--green-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Trades Available</span>
+          <span class="mdl-layout-title">Name of perons (Mobile: 0203010320 20310)</span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
         <!--    <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -118,27 +133,158 @@
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
-
         <div class="mdl-grid demo-content">
-  <table class="mdl-data-table mdl-js-data-table">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Title</th>
-      <th>Location</th>
-      <th>Creator</th>
-      <th>Date Listed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td class="mdl-data-table__cell--non-numeric"><a href="{{url_for('listing',id=id)}}">WANT: Strawberries, Watermelon</a></td>
-      <td>Sydney</td>
-      <td>Chloe Li</td>
-      <td>21-10-18</td>
-    </tr>
+          <!-- their listing start -- >
+          <div class="table-wrap">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
-  </tbody>
-</table>
+            <div class="mdl-card__supporting-text">
+
+              <table class="mdl-data-table mdl-js-data-table">
+                <thead>
+                  <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Current Listings</th>
+                    <th>
+                      Quantity
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric"> Strawberries </td>
+                    <td>223</td>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+          </div>
+          <br>
+          <!-- YOUR OFFER -->
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+
+            <div class="mdl-card__supporting-text">
+              <table class="mdl-data-table mdl-js-data-table">
+                <thead>
+                  <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Current Listings</th>
+                    <th>
+                      Quantity
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric"> Bananas</td>
+                    <td>200</td>
+                  </tr>
+                </tbody>
+                </table>
+                <br>
+
+                <table class="mdl-data-table mdl-js-data-table">
+                  <thead>
+                    <tr>
+                      <th class="mdl-data-table__cell--non-numeric">Requests</th>
+                      <th>
+                        Quantity
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric"> Strawberries </td>
+                      <td>223</td>
+                    </tr>
+                  </tbody>
+                  </table>
+
+
+
+              <form method="post">
+                <div class="table-wrap">
+              <p><h2 class="mdl-card__title-text">Your Offer</h2></p>
+              <table class="mdl-data-table mdl-js-data-table">
+                <thead>
+                  <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Product(s)</th>
+                    <th style="text-align: left">
+                      Quantity
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <input class="mdl-textfield__input" type="text" id="sample1", name="offer1">
+                          <label class="mdl-textfield__label" for="sample1">Your Offer</label>
+                        </div>
+
+                    </td>
+                    <td>
+
+                        <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;">
+                          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="quantity1">
+                          <label class="mdl-textfield__label"  for="sample2">Quantity</label>
+                          <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+              </div>
+              <div class="table-wrap">
+
+                <p><h2 class="mdl-card__title-text">Your Request</h2></p>
+                <table class="mdl-data-table mdl-js-data-table">
+                  <thead>
+                    <tr>
+                      <th class="mdl-data-table__cell--non-numeric">Product(s)</th>
+                      <th style="text-align: left">
+                        Quantity
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+
+                          <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="sample1" name="request1">
+                            <label class="mdl-textfield__label" for="sample1">Your Request</label>
+                          </div>
+
+                      </td>
+                      <td>
+
+                          <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;" name="quantity2">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                            <label class="mdl-textfield__label"  for="sample2">Quantity</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                          </div>
+
+
+
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </div>
+                <p></p>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Submit">
+                  </div>
+            </form>
+            </div>
+            <div class="mdl-card__menu">
+            </div>
+          </div>
+
+
+
 
         </div>
       </main>
@@ -190,7 +336,6 @@
           </g>
         </defs>
       </svg>
-      <a href="{{url_for('addTrade', id=id)}}" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white"><i class="material-icons">add</i>Add Trade</a>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
