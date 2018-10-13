@@ -35,4 +35,6 @@ def addTrade(id):
 
 @app.route("/listing/<int:id>", methods=["GET","POST"])
 def listing(id):
+    if request.method == "POST":
+        pass
     return render_template("listing.html", id=id)
