@@ -28,6 +28,15 @@ def trade(id):
 @app.route("/addTrade/<int:id>", methods=["GET","POST"])
 def addTrade(id):
     if request.method == "POST":
-        #logic here
-        pass
+        #This is to do with the title
+        trade_title = request.form["title"]
+        #This is to do with what you have:
+        product_have = request.form["productH"]
+        quantity_have = request.form["quantityH"]
+        #This is to do with what you want:
+        product_want = request.form["productW"]
+        quantity_want = request.form["quantityW"]
+
+        return redirect("{{url_for('index')}}")
+ 
     return render_template("addTrade.html", id=id)

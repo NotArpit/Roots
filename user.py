@@ -1,6 +1,4 @@
 from flask import Flask
-from abc  import ABC, abstractmethod
-
 
 class User():
 	def __init__(self):

@@ -123,36 +123,53 @@ nu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
             <h2 class="mdl-card__title-text">Request a trade</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            <form method = POST>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" name="product1" id="product1">
-                <label class="mdl-textfield__label" for="sample3">Product</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="quantity1" name="quantity1">
-                <label class="mdl-textfield__label" for="sample4">Quantity</label>
-                <span class="mdl-textfield__error">Invalid Input type</span>
-              </div>
-              <br>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="product2" name="product2">
-                <label class="mdl-textfield__label" for="sample3">Product</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name"quantity2" id="quantity2">
-                <label class="mdl-textfield__label" for="sample4">Quantity</label>
-                <span class="mdl-textfield__error">Invalid Input type</span>
-              </div>
-              <br>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="product3" name="product3">
-                <label class="mdl-textfield__label" for="sample3">Product</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="quantity3">
-                <label class="mdl-textfield__label" for="sample4">Quantity</label>
-                <span class="mdl-textfield__error">Invalid Input type</span>
-              </div>
+
+            <!-- START --> 
+
+            <form method = "POST">
+              <h2 class="mdl-card__title-text">Trade Name</h2>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
+                  <input class="mdl-textfield__input" type="text" id="product2" name="title">
+                  <label class="mdl-textfield__label" for="sample3">Trade Name</label>
+                </div>
+            <table class="dml-date-table mdl-js-data-table" style="border-spacing: 30px">
+              <thead>
+                <tr> 
+                  <th> Product wanted</th>
+                  <th> Your offer </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+              <!-- PRODUCTS WANTED -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="product2" name="productW">
+                  <label class="mdl-textfield__label" for="sample3">Product</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100px">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name= "quantityW" id="quantity2">
+                  <label class="mdl-textfield__label" for="sample4">Quantity</label>
+                  <span class="mdl-textfield__error">Invalid Input type</span>
+                </div>
+          
+                  </td>
+              <td>
+                <!-- PRODUCTS YOU HAVE -->
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="product2" name="productH">
+                  <label class="mdl-textfield__label" for="sample3">Product</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100px">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name= "quantityH" id="quantity2">
+                  <label class="mdl-textfield__label" for="sample4">Quantity</label>
+                  <span class="mdl-textfield__error">Invalid Input type</span>
+                </div>
+              
+              </td>
+              </tr>
+              </tbody>
+              </table>
               <br>
             <input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Add Trade">
             </form>
