@@ -94,7 +94,7 @@ html, body {
   font-weight: 500;
 }
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
+  background-color:#E9E9E9;
   color: #37474F;
 }
 .demo-navigation .mdl-navigation__link .material-icons {
@@ -216,4 +216,16 @@ _:-ms-input-placeholder, :root .demo-graph {
 
 .mdl-data-table {
   width: 100%;
+}
+
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 106px;
+  background-color: green;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
