@@ -100,7 +100,8 @@
 
               <span class="visuallyhidden">Accounts</span>
             </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+            <ul class="mdl-me
+nu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
               <li class="mdl-menu__item">hello@example.com</li>
               <li class="mdl-menu__item">info@example.com</li>
               <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
@@ -122,42 +123,41 @@
             <h2 class="mdl-card__title-text">Request a trade</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            <form action="#">
+            <form method = POST>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text">
+                <input class="mdl-textfield__input" type="text" name="product1" id="product1">
                 <label class="mdl-textfield__label" for="sample3">Product</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="quantity1" name="quantity1">
                 <label class="mdl-textfield__label" for="sample4">Quantity</label>
                 <span class="mdl-textfield__error">Invalid Input type</span>
               </div>
               <br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text">
+                <input class="mdl-textfield__input" type="text" id="product2" name="product2">
                 <label class="mdl-textfield__label" for="sample3">Product</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name"quantity2" id="quantity2">
                 <label class="mdl-textfield__label" for="sample4">Quantity</label>
                 <span class="mdl-textfield__error">Invalid Input type</span>
               </div>
               <br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text">
+                <input class="mdl-textfield__input" type="text" id="product3" name="product3">
                 <label class="mdl-textfield__label" for="sample3">Product</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="quantity3">
                 <label class="mdl-textfield__label" for="sample4">Quantity</label>
                 <span class="mdl-textfield__error">Invalid Input type</span>
               </div>
+              <br>
+            <input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Add Trade">
             </form>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="/addTrade">
-              Create Trade
-            </a>
           </div>
           <div class="mdl-card__menu">
             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
