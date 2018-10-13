@@ -176,7 +176,7 @@
                 <tbody>
                   <tr>
                     <td class="mdl-data-table__cell--non-numeric"> Bananas</td>
-                    <td>200</td>
+                    <td>{{bananaQ}}</td>
                   </tr>
                 </tbody>
                 </table>
@@ -194,7 +194,7 @@
                   <tbody>
                     <tr>
                       <td class="mdl-data-table__cell--non-numeric"> Strawberries </td>
-                      <td>223</td>
+                      <td>{{strawberriesQ}}</td>
                     </tr>
                   </tbody>
                   </table>
@@ -260,8 +260,8 @@
                       </td>
                       <td>
 
-                          <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;" name="quantity2">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                          <div class="mdl-textfield mdl-js-textfield" style="float: left; width: 100px;" >
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="quantity2" id="quantity2">
                             <label class="mdl-textfield__label"  for="sample2">Quantity</label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                           </div>
