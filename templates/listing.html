@@ -79,7 +79,13 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--green-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Name of perons (Mobile: 0203010320 20310)</span>
+          <span class="mdl-layout-title">
+            {% if id == 2 %}
+            Chloe Li (Mobile: 0466124602)
+            {% elif id == 1 %}
+            Apurva Shukla (Mobile: 0410429155)
+            {% endif %}
+          </span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
         <!--    <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -104,11 +110,12 @@
         <header class="demo-drawer-header mdl-color--green-500 mdl-color-text--white">
             <img src="{{ url_for('static', filename='images/user.jpg') }}" class="demo-avatar">
           <div class="demo-avatar-dropdown">
-          <span> {% if id == 1 %}
-                 Chloe Li
-                 {% elif id == 2 %}
-                 Apurva Shukla
-                 {% endif %}
+          <span> 
+            {% if id == 1 %}
+            Chloe Li
+            {% elif id == 2 %}
+            Apurva Shukla
+            {% endif %}
           </span>
             <div class="mdl-layout-spacer"></div>
             <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
