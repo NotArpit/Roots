@@ -2,9 +2,9 @@
 
 # What is Roots?
 
-We are a peer-to-peer based application with the primary goal of minimising food wastage
-within urban cities, restuarants, supermarkets and any general food providers on a daily basis
-waste tonnes of food simply because it is unfit for sale but not at all unfit for consumption.
+We are a peer-to-peer based application with the primary goal of minimising food wastage within urban cities. 
+Food providers such as restuarants and supermarkets waste tonnes of food every day simply because it is unfit 
+for sale but not at all unfit for consumption.
 
 # How do we solve this issue?
 
